@@ -1,0 +1,224 @@
+import requests
+r = requests.get('https://www.vox.com/2018/9/25/17901082/trump-un-2018-speech-full-text')
+r.encoding = 'utf8'
+data = str(r.text)
+
+begin = data.find('Madam President,')
+
+a1 = data[begin:begin+2000]
+a2 = data[begin+2001:begin+4000]
+a3 = data[begin+4001:begin+6000]
+a4 = data[begin+6001:begin+8000]
+a5 = data[begin+8001:begin+10000]
+a6 = data[begin+10001:begin+12000]
+a7 = data[begin+12001:begin+14000]
+a8 = data[begin+14001:begin+16000]
+a9 = data[begin+16001:begin+18000]
+a10 = data[begin+18001:begin+20000]
+a11 = data[begin+22001:begin+23665]
+
+
+a1 = a1.replace('</p>','')
+a1=a1.replace('<p id="1JN4WY">','')
+a1=a1.replace('<p id="a1fKja">','')
+a1=a1.replace('<p id="uMK9dI">','')
+a1=a1.replace('<p id="64m7Jf">','')
+a1=a1.replace('<p id="gM44HV">','')
+a1=a1.replace('<p id="q3GM7z">','')
+a1=a1.replace('<p id="KGCi8L">','')
+a1=a1.replace('<p id="KsUeUC">','')
+a1=a1.replace('<p id="GiwrL6">','')
+a1=a1.replace('<p id="cR5RV5">','')
+
+a2 = a2.replace('</p>','')  
+a2=a2.replace('<p id="YDEq81">','')
+a2=a2.replace('<p id="Z6I5bq">','')
+a2=a2.replace('<p id="u2riPc">','')
+a2=a2.replace('<p id="Yx0P4B">','')
+a2=a2.replace('<p id="npbK00">','')
+a2=a2.replace('<p id="PmWmMj">','')
+a2=a2.replace('<p id="5PzzoY">','')
+a2=a2.replace('<p id="hyZJgK">','')
+a2=a2.replace('<p id="n2wvR5">','')
+a2=a2.replace('<p id="jAAkq5">','')
+
+
+a3 = a3.replace('</p>','')
+a3=a3.replace('<p id="FXgaQ3">','')
+a3=a3.replace('<p id="rIO8UR">','')
+a3=a3.replace('<p id="8zjfzm">','')
+a3=a3.replace('<p id="j1YjtQ">','')
+a3=a3.replace('<p id="DTq7Xx">','')
+a3=a3.replace('<p id="HP7bJv">','')
+a3=a3.replace('<p id="YQiJ1M">','')
+a3=a3.replace('<p id="a7faPp">','')
+a3=a3.replace('<p id="bFDksK">','')
+
+a4 = a4.replace('</p>','')
+a4=a4.replace('<p id="spVgTc">','')
+a4=a4.replace('<p id="ATCHk0">','')
+a4=a4.replace('<p id="GBwq44">','')
+a4=a4.replace('<p id="IXbqpy">','')
+a4=a4.replace('<p id="YyHi6Q">','')
+a4=a4.replace('<p id="Z7D9wR">','')
+a4=a4.replace('<p id="MF6Aj5">','')
+
+a5 = a5.replace('</p>','')
+a5=a5.replace('<p id="BEZFrh">','')
+a5=a5.replace('<p id="aofXQa">','')
+a5=a5.replace('<p id="JaUr5K">','')
+a5=a5.replace('<p id="I5B3we">','')
+a5=a5.replace('<p id="fxkrxd">','')
+a5=a5.replace('<p id="dvYzvh">','')
+a5=a5.replace('<p id="qpJZur">','')
+
+
+a6 = a6.replace('</p>','')
+a6=a6.replace('<p id="GrpRT3">','')
+a6=a6.replace('<p id="gmX2pq">','')
+a6=a6.replace('<p id="kG57U3">','')
+a6=a6.replace('<p id="ACghpr">','')
+a6=a6.replace('<p id="6wgp7q">','')
+a6=a6.replace('<p id="aAhymi">','')
+a6=a6.replace('<p id="arUKY9">','')
+
+a7 = a7.replace('</p>','')
+a7=a7.replace('<p id="U032US">','')
+a7=a7.replace('<p id="oNMPwE">','')
+a7=a7.replace('<p id="HHfKGw">','')
+a7=a7.replace('<p id="VyREAn">','')
+a7=a7.replace('<p id="ho9d9B">','')
+a7=a7.replace('<p id="cF26si">','')
+a7=a7.replace('<p id="3TruLu">','')
+a7=a7.replace('<p id="mg3pQw">','')
+a7=a7.replace('<p id="gl0t4E">','')
+
+
+a8 = a8.replace('</p>','')
+a8=a8.replace('<p id="w5LkMz">','')
+a8=a8.replace('<p id="PJ58ub">','')
+a8=a8.replace('<p id="LoDnTZ">','')
+a8=a8.replace('<p id="vbWlzm">','')
+a8=a8.replace('<p id="64ZSXC">','')
+a8=a8.replace('<p id="K4iZDx">','')
+a8=a8.replace('<p id="l4j77s">','')
+
+
+a9 = a9.replace('</p>','')
+a9 = a9.replace('<p id="oOzvaJ">','')
+a9 = a9.replace('<p id="nWbjqU">','')
+a9 = a9.replace('<p id="5fGqFK">','')
+a9 = a9.replace('<p id="YfDLjI">','')
+a9 = a9.replace('<p id="G97hic">','')
+a9 = a9.replace('<p id="BkmM5D">','')
+a9 = a9.replace('<p id="aCKAHN">','')
+a9 = a9.replace('<p id="EdgTnP">','')
+
+
+a10= a10.replace('</p>','')
+a10=a10.replace('<p id="z5XIGd">','')
+a10=a10.replace('<p id="JG31ve">','')
+a10=a10.replace('<p id="LtvQ0U">','')
+a10=a10.replace('<p id="U0le6t">','')
+a10=a10.replace('<p id="wtVDOX">','')
+a10=a10.replace('<p id="ifFWwQ">','')
+
+
+a11= a11.replace('</p>','')
+a11=a11.replace('<p id="oeG0df">','')
+a11=a11.replace('<p id="WPa6ga">','')
+a11=a11.replace('<p id="uCDYdn">','')
+a11=a11.replace('<p id="ADSChO">','')
+a11=a11.replace('<p id="Aogf2Y">','')
+a11=a11.replace('<p id="68hVhn">','')
+a11=a11.replace('<p id="g9nuW5">','')
+
+a1=a1.lower()
+a2=a2.lower()
+a3=a3.lower()
+a4=a4.lower()
+a5=a5.lower()
+a6=a6.lower()
+a7=a7.lower()
+a8=a8.lower()
+a9=a9.lower()
+a10=a10.lower()
+a11=a11.lower()
+
+
+
+mydict = {}
+
+
+for k in a1.split():
+    if k in mydict:
+        mydict[k]+= 1
+    else:
+        mydict[k] = 1
+
+for k in a2.split():
+    if k in mydict:
+        mydict[k]+= 1
+    else:
+        mydict[k] = 1
+
+for k in a3.split():
+    if k in mydict:
+        mydict[k]+= 1
+    else:
+        mydict[k] = 1
+
+for k in a4.split():
+    if k in mydict:
+        mydict[k]+= 1
+    else:
+        mydict[k] = 1
+
+for k in a5.split():
+    if k in mydict:
+        mydict[k]+= 1
+    else:
+        mydict[k] = 1
+
+for k in a6.split():
+    if k in mydict:
+        mydict[k]+= 1
+    else:
+        mydict[k] = 1
+
+for k in a7.split():
+    if k in mydict:
+        mydict[k]+= 1
+    else:
+        mydict[k] = 1
+
+for k in a8.split():
+    if k in mydict:
+        mydict[k]+= 1
+    else:
+        mydict[k] = 1
+
+for k in a9.split():
+    if k in mydict:
+        mydict[k]+= 1
+    else:
+        mydict[k] = 1
+
+for k in a10.split():
+    if k in mydict:
+        mydict[k]+= 1
+    else:
+        mydict[k] = 1
+
+for k in a11.split():
+    if k in mydict:
+        mydict[k]+= 1
+    else:
+        mydict[k] = 1
+  
+for k in sorted(mydict, key=mydict.__getitem__, reverse=False):
+    if mydict[k]>=23:
+        print(k, mydict[k])
+        
+
+

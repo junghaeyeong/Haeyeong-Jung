@@ -1,3 +1,32 @@
 일정 주기로 같은 카테고리(ex.사건사고, 날씨, 사회 등)의 기사 제목을 분석해서 어떤 식으로 그 내용들이 변화하고 있는지 혹은 변하지 않고 꾸준히 발생하는
 사건이 있는지를 분석하며 주제에 대한 경향을 파악하는 것.
 
+import requests
+url= 'https://news.naver.com/main/list.nhn?mode=LS2D&sid2=249&sid1=102&mid=sec&listType=title&date=20181114' 
+r=requests.get(url) 
+r.encoding='utf8' 
+data=str(r.text) 
+begin=data.find('"여자라서 맞았다"...성 대결로 번진 ') 
+end=data.rfind("'이수혁 폭행'으로 온라인 뜨거워...")+len("'이수혁 폭행'으로 온라인 뜨거워...") 
+  
+ 
+data=data[begin:end] 
+data=data.replace('<p',' ') 
+data=data.replace('</p>',' ') 
+  
+ 
+words=data.split() 
+mydict={} 
+  
+ 
+for w in words:
+    if w in mydict:
+        mydict[w]+=1 
+    else:
+        mydict[w]=1 
+ 
+ 
+def keyfunction(k):
+    return mydict[k]
+for key in sorted(mydict, key=keyfunction, reverse=True): 
+     print("%s:%i"%(key, mydict[key])) 
